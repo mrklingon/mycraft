@@ -9,6 +9,9 @@ function showUNI (xx: number, yy: number) {
     }
 }
 function buildWorld () {
+    for (let index = 0; index <= Unisize; index++) {
+        Universe[index] = 0
+    }
     for (let index2 = 0; index2 <= Diameter - 1; index2++) {
         Universe[getSPOT(index2, 4)] = DIRT
         if (6 < randint(0, 10)) {
@@ -59,9 +62,10 @@ let GRASS = 0
 let Tree = 0
 let DIRT = 0
 let Universe: number[] = []
+let Unisize = 0
 let Diameter = 0
 Diameter = 100
-let Unisize = Diameter * 10
+Unisize = Diameter * 10
 Universe = [0]
 for (let index = 0; index < Unisize; index++) {
     Universe.push(0)
