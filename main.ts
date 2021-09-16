@@ -9,7 +9,13 @@ function showUNI (xx: number, yy: number) {
     }
 }
 function MkStars (Xx: number, Yy: number) {
-	
+    Clear_Screen(Xx, Yy)
+    for (let index = 0; index <= 3; index++) {
+        for (let index = 0; index <= 4; index++) {
+            setPix(Xx + index2, Sy + index, 0)
+        }
+    }
+    showUNI(Sx, Sy)
 }
 function buildWorld () {
     basic.showLeds(`
@@ -55,6 +61,14 @@ input.onButtonPressed(Button.A, function () {
         showUNI(x, y)
     }
 })
+function Clear_Screen (Sx: number, Sy: number) {
+    for (let index = 0; index <= 3; index++) {
+        for (let index = 0; index <= 4; index++) {
+            setPix(Sx + index2, Sy + index, 0)
+        }
+    }
+    showUNI(Sx, Sy)
+}
 input.onButtonPressed(Button.AB, function () {
     mode += 1
     if (5 < mode) {
@@ -102,6 +116,7 @@ function getSPOT (xx: number, yy: number) {
 function getX (spot: number) {
     return spot % Diameter
 }
+let index2 = 0
 let y = 0
 let x = 0
 let GRASS = 0
