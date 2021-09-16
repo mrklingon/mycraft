@@ -8,6 +8,9 @@ function showUNI (xx: number, yy: number) {
         }
     }
 }
+function MkStars (Xx: number, Yy: number) {
+	
+}
 function buildWorld () {
     basic.showLeds(`
         . . . . .
@@ -125,6 +128,7 @@ for (let index = 0; index < Unisize; index++) {
     Universe.push(0)
 }
 DIRT = 255
+let Star = 25
 Tree = 100
 GRASS = 100
 x = 0
