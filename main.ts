@@ -12,7 +12,7 @@ function MkStars (Xx: number, Yy: number) {
     Clear_Screen(Xx, Yy)
     for (let index3 = 0; index3 <= 3; index3++) {
         for (let index4 = 0; index4 <= 4; index4++) {
-            if (8 > randint(0, 10)) {
+            if (8 > randint(0, 25)) {
                 setPix(Xx + index4, Yy + index3, randint(30, 50))
             }
         }
@@ -199,13 +199,26 @@ GRASS = 100
 x = 0
 y = 0
 images.createBigImage(`
-    . . . . . . . . . #
-    . # # . . # # . . .
-    . # # . . . # # . #
-    . # # . . . # . . .
-    # # # # # # # # # #
+    . . . . . . . . . .
+    . . . . . . . . . .
+    # # # # . # . # # .
+    # # # . # . # . . .
+    # . # . # . . # # .
     `).scrollImage(1, 200)
-basic.showString("MyCraft")
+images.createBigImage(`
+    . . . . . . . . . .
+    . . . . . . . . . .
+    # # . . . # . . # #
+    # # . . # # # . # #
+    # . # . # . # . # .
+    `).scrollImage(1, 200)
+images.createBigImage(`
+    . . . . . . . . . .
+    . . . . . . . . . .
+    # # # . . . . . . .
+    . # . . . . . . . .
+    . # . . . . . . . .
+    `).scrollImage(1, 200)
 basic.showLeds(`
     . . . . .
     . . . . .
